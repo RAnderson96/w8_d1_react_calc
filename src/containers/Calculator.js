@@ -91,13 +91,14 @@ function App() {
   const multiply = (number) => {
     
       let calculatedNumber = parseFloat(previousTotal) * parseFloat(number);
-      if (calculatedNumber===Infinity){
-        calculatedNumber="Error"
+      if (calculatedNumber===Infinity) {
+        setRunningTotal("Error");
+        setCalculatedTotal("Error");
       }
       else {
         setRunningTotal(calculatedNumber);
         setCalculatedTotal(calculatedNumber);
-        
+
       }
     }
   
